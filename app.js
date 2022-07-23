@@ -57,4 +57,19 @@ const createDocument = async() => {
 }
 
 // Calling the function to create a user
-createDocument();
+// createDocument();
+
+// Aync function to get all the users
+const getDocument = async() => {
+
+    try {
+        // Getting the user
+        const user = await User.find();
+        console.log(user);
+    } catch (err) {
+        console.log(err);
+    }
+
+}
+
+getDocument();
