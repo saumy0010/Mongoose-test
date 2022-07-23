@@ -72,4 +72,19 @@ const getDocument = async() => {
 
 }
 
-getDocument();
+// getDocument();
+
+const updateDocument = async() => {
+
+    try {
+        // Updating the user
+        const result = await User.updateOne({ name: 'Ravi Sins' }, { $set: { age: 170 } });
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+
+}
+
+// Updating the user data
+updateDocument();
